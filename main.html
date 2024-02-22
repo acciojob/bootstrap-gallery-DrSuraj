@@ -1,16 +1,114 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compact Gallery</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+
+<div class="container">
+    <h2 class="text-center mt-4 mb-5">Cards Gallery</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="#" data-toggle="modal" data-target="#imageModal">
+                    <img src="Image1.jpg" class="card-img-top" alt="Image 1">
+                </a>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Card 1</h6>
+                    <p class="card-text">Description for Card 1.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the above card structure for additional cards -->
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="#" data-toggle="modal" data-target="#imageModal">
+                    <img src="Image2.jpg" class="card-img-top" alt="Image 2">
+                </a>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Card 2</h6>
+                    <p class="card-text">Description for Card 2.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="#" data-toggle="modal" data-target="#imageModal">
+                    <img src="Image3.jpg" class="card-img-top" alt="Image 3">
+                </a>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Card 3</h6>
+                    <p class="card-text">Description for Card 3.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="#" data-toggle="modal" data-target="#imageModal">
+                    <img src="Image4.jpg" class="card-img-top" alt="Image 4">
+                </a>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Card 4</h6>
+                    <p class="card-text">Description for Card 4.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="#" data-toggle="modal" data-target="#imageModal">
+                    <img src="Image5.jpg" class="card-img-top" alt="Image 5">
+                </a>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Card 5</h6>
+                    <p class="card-text">Description for Card 5.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="#" data-toggle="modal" data-target="#imageModal">
+                    <img src="Image6.jpg" class="card-img-top" alt="Image 6">
+                </a>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Card 6</h6>
+                    <p class="card-text">Description for Card 6.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" id="modalImage" class="img-fluid" alt="Modal Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Script to set the modal image src when card image is clicked
+    $('.card-img-top').click(function () {
+        var imgSrc = $(this).attr('src');
+        $('#modalImage').attr('src', imgSrc);
+    });
 </script>
 
 </body>
-
 </html>
